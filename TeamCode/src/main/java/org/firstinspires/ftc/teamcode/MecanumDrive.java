@@ -74,7 +74,7 @@ public final class MecanumDrive {
         // feedforward parameters (in tick units)
         public double kS = 0.762157275278645;
         public double kV =  0.00007812788269953226;
-        public double kA = 0.000031;
+        public double kA = 0.0000135;
 
 
         // path profile parameters (in inches)
@@ -86,14 +86,16 @@ public final class MecanumDrive {
         public double maxAngVel = Math.PI; // shared with path
         public double maxAngAccel = Math.PI;
 
-        // path controller gains
-        public double axialGain = -.01;
+        // path controller gains./adb connect 192.168.43.1:5555
+        public double axialGain = 0.0;
         //.00003661835875
-        public double lateralGain = .07;
+        public double lateralGain = .2;
         //0.0025
-        public double headingGain = 0.0005; // shared with turn
+        public double headingGain = .01; // shared with turn
         //0.000125
         //.001
+        //.0346 most recent value
+        //.0005
         public double axialVelGain = 0.0;
         public double lateralVelGain = 0.0;
         public double headingVelGain = 0.0; // shared with turn
